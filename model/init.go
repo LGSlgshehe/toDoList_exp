@@ -26,4 +26,5 @@ func DataBase(connstring string) {
 	db.DB().SetMaxOpenConns(200)                 //设置最大连接数
 	db.DB().SetConnMaxLifetime(time.Second * 30) //设置连接时间？？似乎是最大生命周期
 	DB = db
+	migration()
 }
